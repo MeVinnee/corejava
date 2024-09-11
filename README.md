@@ -1,2 +1,2 @@
-#This is # selenium-core-java
-##Auther - Vinnee
+# This is selenium-core-java project.
+## Auther - Vinnee

@@ -11,19 +11,31 @@ public class Main {
 
        //** IncrementOperators
 
-        AllOperators inc = new AllOperators();
-        inc.incrementOperators();
+//      //*** AllOperators inc = new AllOperators();
+//        inc.incrementOperators();
+//
+//        //** DecrementOperators
+//        AllOperators dec = new AllOperators();
+//        dec.decrementOperators();
+//
+//        //inc & dec Operators
+//        AllOperators incdec = new AllOperators();
+//        incdec.incdecoperators();
+//
+//        AllOperators swapValue = new AllOperators();
+//        swapValue.swap();
+//
+       // IFElse ch1 = new IFElse();
+       // ch1.challenge1();
 
-        //** DecrementOperators
-        AllOperators dec = new AllOperators();
-        dec.decrementOperators();
+       // IFElse ch2 = new IFElse();
+      //  ch2.challenge3();
 
-        //inc & dec Operators
-        AllOperators incdec = new AllOperators();
-        incdec.incdecoperators();
+       // IFElse egwhileloop = new IFElse();
+       // egwhileloop.whileloop();
 
-        AllOperators swapValue = new AllOperators();
-        swapValue.swap();
+        IFElse ch4 = new IFElse();
+        ch4.challenge4();
 
 
     }

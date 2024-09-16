@@ -33,10 +33,12 @@ public class Main {
 
        // IFElse egwhileloop = new IFElse();
        // egwhileloop.whileloop();
+//
+//        IFElse ch4 = new IFElse();
+//        ch4.challenge4();
 
-        IFElse ch4 = new IFElse();
-        ch4.challenge4();
-
+        IFElse ch5 = new IFElse();
+        ch5.challenge5();
 
     }
 }

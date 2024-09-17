@@ -87,9 +87,26 @@ public class IFElse {
         } while (a == 1);
 
     }
-}
+
 //ask user to enter two numbers and print it. and do sum of the two numbers in do while loop.
 // add condition as if user wants to continue the operation then loop execute otherwise it will terminate.
 
+////////////////////////*************FOR LOOP ***********************/////////////////////
+
+    ///when user will enter the number it will multiply by i every time and that i will increse by 1
+    public void challenge6(){
+        Scanner sc =new Scanner(System.in);
+        System.out.println("Enter the number");
+        int input = sc.nextInt();
+
+        for(int i = 1; i <= 10; i++  ){
+
+            int total = input * i;
+
+            System.out.println(input  + " * " + i + " = " + total);
+
+        }
+    }
+}
 
 

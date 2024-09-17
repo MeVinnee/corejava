@@ -37,8 +37,11 @@ public class Main {
 //        IFElse ch4 = new IFElse();
 //        ch4.challenge4();
 
-        IFElse ch5 = new IFElse();
-        ch5.challenge5();
+//        IFElse ch5 = new IFElse();
+//        ch5.challenge5();
+
+//         IFElse ch6 = new IFElse();
+//         ch6.challenge6();
 
     }
 }

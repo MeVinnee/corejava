@@ -13,5 +13,9 @@ public class Main {
         //safari SafariDriver - methods close get
         System.setProperty("Webdriver.chrome.driver", "C:/Users/vanit/OneDrive/Documents/SeleniumFiles/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
+        driver.get("https://rahulshettyacademy.com/");
+        System.out.println(driver.getTitle());
+        System.out.println(driver.getCurrentUrl());
+        driver.quit();
     }
 }

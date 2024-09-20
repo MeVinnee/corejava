@@ -43,7 +43,10 @@ public class Main {
 
 //         IFElse ch6 = new IFElse();
 //         ch6.challenge6();
-        QuizandFacts ex1 = new QuizandFacts();
-        ex1.Swich();
+//        QuizandFacts ex1 = new QuizandFacts();
+//        ex1.Swich();
+
+            Arrays Pr1 = new Arrays();
+            Pr1.practice1();
     }
 }

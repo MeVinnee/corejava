@@ -62,5 +62,24 @@ public class Arrays {
             System.out.println(a.contains("Patil"));
 
     }
+        public void Practice2 (){
+            String s1 = "Vanita Ajit Patil";
+            String[] splittedString = s1.split(" Ajit ");
+            System.out.println(splittedString[0]);
+            System.out.println(splittedString[1]);
+
+            for (int i=0; i<s1.length(); i++){
+                System.out.println(s1.charAt(i));
+            }
+        }
+        //How to print Reverse order
+        public void Practice3 (){
+            String s2 = "Anvi Ajit patil";
+
+            for (int i= s2.length()-1; i >= 0; i--){
+                System.out.println(s2.charAt(i));
+            }
+
+    }
 
 }

@@ -45,8 +45,14 @@ public class Main {
 //         ch6.challenge6();
 //        QuizandFacts ex1 = new QuizandFacts();
 //        ex1.Swich();
+//
+//            Arrays Pr1 = new Arrays();
+//            Pr1.practice1();
 
-            Arrays Pr1 = new Arrays();
-            Pr1.practice1();
+//            Arrays pr2 = new Arrays();
+//            pr2.Practice2();
+
+            Arrays pr3 = new Arrays();
+            pr3.Practice3();
     }
 }

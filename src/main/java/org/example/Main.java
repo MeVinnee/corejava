@@ -14,24 +14,6 @@ public class Main {
 
         System.setProperty("webdriver.chrome.driver", "C:/Users/vanit/OneDrive/Documents/SeleniumFiles/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-        driver.get("https://rahulshettyacademy.com/locatorspractice");
-        driver.findElement(By.id("inputUsername")).sendKeys("rahul");
-        driver.findElement(By.name("inputPassword")).sendKeys("rahul");
-        driver.findElement(By.className("submit")).click();
-        System.out.println(driver.findElement(By.cssSelector("p.error")).getText());
-        driver.findElement(By.linkText("Forgot your password?")).click();
-        Thread.sleep(1000);
-        driver.findElement(By.xpath("//input[@placeholder='Name']")).sendKeys("Vanita");
-        driver.findElement(By.cssSelector("input[placeholder='Email']")).sendKeys("vanita.xyz@gmail.com");
-        driver.findElement(By.xpath("//input[@type='text'][2]")).clear();
-        driver.findElement(By.cssSelector("input[placeholder='Email']")).sendKeys("vanita.patil@gmail.com");
-        driver.findElement(By.xpath("//form/input[3]")).sendKeys("00000000");
-        driver.findElement(By.cssSelector("button.reset-pwd-btn")).click();
-        System.out.println(driver.findElement(By.cssSelector("form p")).getText());
-        driver.quit();
-
-
 
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.

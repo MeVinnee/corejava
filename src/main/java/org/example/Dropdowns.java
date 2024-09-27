@@ -49,6 +49,7 @@ public class Dropdowns {
           }
           driver.findElement(By.id("hrefIncChd")).click();
           driver.findElement(By.id("btnclosepaxoption"));
+          System.out.println(driver.findElement(By.id("divpaxinfo")).getText());
           driver.close();
     }
 }

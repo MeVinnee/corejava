@@ -10,7 +10,11 @@ public class Dropdowns {
         System.setProperty("webdriver.chrome.driver", "C:/Users/vanit/OneDrive/Documents/SeleniumFiles/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.get("https://rahulshettyacademy.com/dropdownsPractise/");
-        //
+        Dropdowns obj = new Dropdowns();
+        obj.staticDropdown(driver);
+    }
+    public void staticDropdown(WebDriver driver){
+
         WebElement staticDropdown = driver.findElement(By.id("ctl00_mainContent_DropDownListCurrency"));
         Select dropdown = new Select(staticDropdown);
         dropdown.selectByIndex(3);
@@ -19,6 +23,6 @@ public class Dropdowns {
         System.out.println(dropdown.getFirstSelectedOption().getText());
         dropdown.selectByValue("INR");
         System.out.println(dropdown.getFirstSelectedOption().getText());
-       // driver.close();
+        driver.close();
     }
 }

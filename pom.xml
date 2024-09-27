@@ -4,7 +4,9 @@
     <artifactId>FirstMavenProject</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <dependencies>
+
         <dependency>
+
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>4.23.1</version>
@@ -50,6 +52,5 @@
             <version>4.23.1</version>
             <scope>compile</scope>
         </dependency>
-
     </dependencies>
 </project>

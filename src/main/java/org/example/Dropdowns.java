@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.util.List;
+
 public class Dropdowns {
     public static void main (String [] args) throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "C:/Users/vanit/OneDrive/Documents/SeleniumFiles/New folder/chromedriver.exe");
@@ -14,9 +16,12 @@ public class Dropdowns {
         //StaticDropdown
 //        Dropdowns obj = new Dropdowns();
 //        obj.staticDropdown(driver);
-        Dropdowns obj1 = new Dropdowns();
-        obj1.updateDropdown(driver);
+//        Dropdowns obj1 = new Dropdowns();
+//        obj1.updateDropdown(driver);
 //      ChormeVersion is Version 129.0.6668.71
+        Dropdowns obj2 = new Dropdowns();
+        obj2.AutoSuggestiveDropdown(driver);
+
     }
     public void staticDropdown(WebDriver driver){
 
@@ -52,4 +57,18 @@ public class Dropdowns {
           System.out.println(driver.findElement(By.id("divpaxinfo")).getText());
           driver.close();
     }
-}
+    public void AutoSuggestiveDropdown(WebDriver driver) throws InterruptedException {
+
+        driver.findElement(By.id("autosuggest")).sendKeys("ind");
+        Thread.sleep(2000);
+        List<WebElement> options = driver.findElements(By.cssSelector("li[class='ui-menu-item'] a"));
+        for (WebElement option : options) {
+
+            if (option.getText().equalsIgnoreCase("India")){
+                option.click();
+                break;
+            }
+        }
+
+        driver.quit();
+}}

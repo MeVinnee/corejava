@@ -16,11 +16,17 @@ public class Dropdowns {
         //StaticDropdown
 //        Dropdowns obj = new Dropdowns();
 //        obj.staticDropdown(driver);
+
 //        Dropdowns obj1 = new Dropdowns();
 //        obj1.updateDropdown(driver);
 //      ChormeVersion is Version 129.0.6668.71
-        Dropdowns obj2 = new Dropdowns();
-        obj2.AutoSuggestiveDropdown(driver);
+
+        //AutoSuggestive Dropdown
+//        Dropdowns obj2 = new Dropdowns();
+//        obj2.AutoSuggestiveDropdown(driver);
+
+        Dropdowns obj3 = new Dropdowns();
+        obj3.dynamicDropdown(driver);
 
     }
     public void staticDropdown(WebDriver driver){
@@ -69,6 +75,15 @@ public class Dropdowns {
                 break;
             }
         }
+    }
+    public void dynamicDropdown(WebDriver driver) throws InterruptedException {
+        driver.findElement(By.id("ctl00_mainContent_ddl_originStation1_CTXTaction")).click();
+        driver.findElement(By.xpath("//a[@value='PNQ']")).click();
+        Thread.sleep(3000);
+        //This code may not approve
+       // driver.findElement(By.xpath("(//a[@value='BLR'])[2]")).click();
+        //How to use parent-child relationship locator to identify the object uniquely
+        driver.findElement(By.xpath("//div[@id='glsctl00_mainContent_ddl_destinationStation1_CTNR'] //a[@value='BLR']")).click();
 
-        driver.quit();
-}}
+    }
+}

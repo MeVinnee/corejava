@@ -11,7 +11,11 @@ public class Dropdowns {
     public static void main (String [] args) throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "C:/Users/vanit/OneDrive/Documents/SeleniumFiles/New folder/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
-        driver.get("https://rahulshettyacademy.com/dropdownsPractise/");
+//        driver.get("https://rahulshettyacademy.com/dropdownsPractise/");
+        driver.get("https://spicejet.com");
+        System.out.println(driver.findElement(By.xpath("//div[@class='css-76zvg2 r-cqee49 r-1enofrn r-1ozqkpa' and text()='Senior Citizen']")).isSelected());
+        driver.findElement(By.xpath("//div[@class='css-76zvg2 r-cqee49 r-1enofrn r-1ozqkpa' and text()='Senior Citizen']")).click();
+        Thread.sleep(4000);
 
         //StaticDropdown
 //        Dropdowns obj = new Dropdowns();
@@ -25,8 +29,8 @@ public class Dropdowns {
 //        Dropdowns obj2 = new Dropdowns();
 //        obj2.AutoSuggestiveDropdown(driver);
 
-        Dropdowns obj3 = new Dropdowns();
-        obj3.dynamicDropdown(driver);
+//        Dropdowns obj3 = new Dropdowns();
+//        obj3.dynamicDropdown(driver);
 
     }
     public void staticDropdown(WebDriver driver){
@@ -84,6 +88,10 @@ public class Dropdowns {
        // driver.findElement(By.xpath("(//a[@value='BLR'])[2]")).click();
         //How to use parent-child relationship locator to identify the object uniquely
         driver.findElement(By.xpath("//div[@id='glsctl00_mainContent_ddl_destinationStation1_CTNR'] //a[@value='BLR']")).click();
+
+    }
+    public void checkboxes() throws InterruptedException {
+
 
     }
 }

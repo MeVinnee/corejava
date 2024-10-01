@@ -1,4 +1,5 @@
 package org.example;
+import org.junit.Assert;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -26,11 +27,15 @@ public class Dropdowns {
 //            Dropdowns obj2 = new Dropdowns();
 //            obj2.AutoSuggestiveDropdown(driver);
 //
-                Dropdowns obj3 = new Dropdowns();
-                obj3.dynamicDropdown(driver);
+//                Dropdowns obj3 = new Dropdowns();
+//                obj3.dynamicDropdown(driver);
 //
 //            Dropdowns obj4 = new Dropdowns();
 //            obj4.checkboxes(driver);
+
+               Dropdowns obj5 = new Dropdowns();
+               obj5.UIElement(driver);
+
 
     }
     public void staticDropdown(WebDriver driver){
@@ -90,8 +95,6 @@ public class Dropdowns {
 
         //Calender Dropdown Handling
         driver.findElement(By.cssSelector(".ui-state-default.ui-state-highlight")).click();
-
-
     }
 
 
@@ -101,5 +104,18 @@ public class Dropdowns {
 
         System.out.println(driver.findElement(By.id("ctl00_mainContent_SeniorCitizenDiv")).isSelected());
         driver.findElement(By.id("ctl00_mainContent_SeniorCitizenDiv")).click();
+    }
+    public void UIElement(WebDriver driver){
+        System.out.println(driver.findElement(By.id("Div1")).getAttribute("style"));
+        driver.findElement(By.id("ctl00_mainContent_rbtnl_Trip_1")).click();
+        System.out.println(driver.findElement(By.id("Div1")).getAttribute("style"));
+
+        if(driver.findElement(By.id("Div1")).getAttribute("style").contains("1")){
+            System.out.println("It's Enable");
+            Assert.assertTrue(true);
+        }else {
+            Assert.assertTrue(false);
+        }
+
     }
 }

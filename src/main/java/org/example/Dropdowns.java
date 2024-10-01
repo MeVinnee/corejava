@@ -11,26 +11,26 @@ public class Dropdowns {
     public static void main (String [] args) throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "C:/Users/vanit/OneDrive/Documents/SeleniumFiles/New folder/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
-//        driver.get("https://rahulshettyacademy.com/dropdownsPractise/");
-        driver.get("https://spicejet.com");
-        System.out.println(driver.findElement(By.xpath("//div[@class='css-76zvg2 r-cqee49 r-1enofrn r-1ozqkpa' and text()='Senior Citizen']")).isSelected());
-        driver.findElement(By.xpath("//div[@class='css-76zvg2 r-cqee49 r-1enofrn r-1ozqkpa' and text()='Senior Citizen']")).click();
-        Thread.sleep(4000);
+        driver.get("https://rahulshettyacademy.com/dropdownsPractise/");
 
-        //StaticDropdown
-//        Dropdowns obj = new Dropdowns();
-//        obj.staticDropdown(driver);
-
-//        Dropdowns obj1 = new Dropdowns();
-//        obj1.updateDropdown(driver);
-//      ChormeVersion is Version 129.0.6668.71
-
-        //AutoSuggestive Dropdown
-//        Dropdowns obj2 = new Dropdowns();
-//        obj2.AutoSuggestiveDropdown(driver);
-
-//        Dropdowns obj3 = new Dropdowns();
-//        obj3.dynamicDropdown(driver);
+//       // StaticDropdown
+//            Dropdowns obj = new Dropdowns();
+//            obj.staticDropdown(driver);
+//
+//            Dropdowns obj1 = new Dropdowns();
+//            obj1.updateDropdown(driver);
+//
+//         // ChormeVersion is Version 129.0.6668.71
+//
+//           // AutoSuggestive Dropdown
+//            Dropdowns obj2 = new Dropdowns();
+//            obj2.AutoSuggestiveDropdown(driver);
+//
+                Dropdowns obj3 = new Dropdowns();
+                obj3.dynamicDropdown(driver);
+//
+//            Dropdowns obj4 = new Dropdowns();
+//            obj4.checkboxes(driver);
 
     }
     public void staticDropdown(WebDriver driver){
@@ -46,26 +46,25 @@ public class Dropdowns {
         driver.close();
     } public void updateDropdown(WebDriver driver) throws InterruptedException {
 
-//        driver.findElement(By.id("divpaxinfo")).click();
-//        Thread.sleep(2000);
-//        int i = 1;
-//        while (i<5){
-//            driver.findElement(By.id("hrefIncAdt")).click();
-//            i++;
-//        }
-//        driver.findElement(By.id("hrefIncChd")).click();
-//        driver.findElement(By.id("btnclosepaxoption"));
-//        driver.close();
+        driver.findElement(By.id("divpaxinfo")).click();
+        Thread.sleep(2000);
+        int i = 1;
+        while (i<5){
+            driver.findElement(By.id("hrefIncAdt")).click();
+            i++;
+        }
+        driver.findElement(By.id("hrefIncChd")).click();
+        driver.findElement(By.id("btnclosepaxoption"));
 
-          driver.findElement(By.id("divpaxinfo")).click();
-          Thread.sleep(2000);
-          for (int i=1; i<5; i++){
-              driver.findElement(By.id("hrefIncAdt")).click();
-          }
-          driver.findElement(By.id("hrefIncChd")).click();
-          driver.findElement(By.id("btnclosepaxoption"));
-          System.out.println(driver.findElement(By.id("divpaxinfo")).getText());
-          driver.close();
+//          driver.findElement(By.id("divpaxinfo")).click();
+//          Thread.sleep(2000);
+//          for (int i=1; i<5; i++){
+//              driver.findElement(By.id("hrefIncAdt")).click();
+//          }
+//          driver.findElement(By.id("hrefIncChd")).click();
+//          driver.findElement(By.id("btnclosepaxoption"));
+//          System.out.println(driver.findElement(By.id("divpaxinfo")).getText());
+
     }
     public void AutoSuggestiveDropdown(WebDriver driver) throws InterruptedException {
 
@@ -89,9 +88,18 @@ public class Dropdowns {
         //How to use parent-child relationship locator to identify the object uniquely
         driver.findElement(By.xpath("//div[@id='glsctl00_mainContent_ddl_destinationStation1_CTNR'] //a[@value='BLR']")).click();
 
+        //Calender Dropdown Handling
+        driver.findElement(By.cssSelector(".ui-state-default.ui-state-highlight")).click();
+
+
     }
-    public void checkboxes() throws InterruptedException {
 
 
+    public void checkboxes(WebDriver driver) throws InterruptedException {
+
+        System.out.println(driver.findElements(By.cssSelector("input[type='checkbox']")).size());
+
+        System.out.println(driver.findElement(By.id("ctl00_mainContent_SeniorCitizenDiv")).isSelected());
+        driver.findElement(By.id("ctl00_mainContent_SeniorCitizenDiv")).click();
     }
 }

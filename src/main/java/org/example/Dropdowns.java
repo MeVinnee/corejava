@@ -18,8 +18,8 @@ public class Dropdowns {
 //            Dropdowns obj = new Dropdowns();
 //            obj.staticDropdown(driver);
 //
-//            Dropdowns obj1 = new Dropdowns();
-//            obj1.updateDropdown(driver);
+            Dropdowns obj1 = new Dropdowns();
+            obj1.updateDropdown(driver);
 //
 //         // ChormeVersion is Version 129.0.6668.71
 //
@@ -32,9 +32,9 @@ public class Dropdowns {
 //
 //            Dropdowns obj4 = new Dropdowns();
 //            obj4.checkboxes(driver);
-
-               Dropdowns obj5 = new Dropdowns();
-               obj5.UIElement(driver);
+//
+//               Dropdowns obj5 = new Dropdowns();
+//               obj5.UIElement(driver);
 
 
     }
